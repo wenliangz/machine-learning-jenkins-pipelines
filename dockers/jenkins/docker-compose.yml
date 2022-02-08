@@ -10,4 +10,4 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     build:
       context: ./clean
-#    privileged: true
+    privileged: true
