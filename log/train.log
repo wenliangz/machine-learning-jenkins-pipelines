@@ -1,0 +1,13 @@
+2022-02-07 19:50:01,353 : INFO : utility : Finished logger configuration!
+2022-02-07 19:50:01,372 : INFO : utility : Load config from scripts/config.yml
+2022-02-07 19:50:01,377 : INFO : utility : config: {'processed_train': 'data/train.csv', 'ensemble_model': 'RandomForestClassifier', 'model_config': {'n_estimators': 100, 'random_state': 42}, 'model_path': 'model/rf_model.pkl'}
+2022-02-07 19:50:01,377 : INFO : utility : -------------------Load the processed data-------------------
+2022-02-07 19:50:01,403 : INFO : utility : cols: ['fixed_acidity', 'volatile_acidity', 'citric_acid', 'residual_sugar', 'chlorides', 'free_sulfur_dioxide', 'total_sulfur_dioxide', 'density', 'pH', 'sulphates', 'alcohol', 'quality']
+2022-02-07 19:50:01,404 : INFO : utility : X: (1279, 11)
+2022-02-07 19:50:01,404 : INFO : utility : y: (1279,)
+2022-02-07 19:50:01,404 : INFO : utility : -------------------Initiate model-------------------
+2022-02-07 19:50:01,404 : INFO : utility : Train model using RandomForestClassifier, {'n_estimators': 100, 'random_state': 42}
+2022-02-07 19:50:01,833 : INFO : utility : Train score: 1.0
+2022-02-07 19:50:03,665 : INFO : utility : CV score: 0.8991513480392157
+2022-02-07 19:50:03,665 : INFO : utility : -------------------Persist model-------------------
+2022-02-07 19:50:03,723 : INFO : utility : Persisted model to model\rf_model.pkl

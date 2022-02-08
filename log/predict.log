@@ -1,0 +1,20 @@
+2022-02-07 19:50:09,501 : INFO : utility : Finished logger configuration!
+2022-02-07 19:50:09,501 : INFO : utility : Load config from scripts/config.yml
+2022-02-07 19:50:09,506 : INFO : utility : config: {'model_path': 'model/rf_model.pkl', 'processed_test': 'data/test.csv', 'predicted_file': 'data/predict.csv', 'export_result': True}
+2022-02-07 19:50:09,506 : INFO : utility : -------------------Load the trained model-------------------
+2022-02-07 19:50:09,522 : INFO : utility : Load the test data from data/test.csv
+2022-02-07 19:50:09,531 : INFO : utility : cols: ['fixed_acidity', 'volatile_acidity', 'citric_acid', 'residual_sugar', 'chlorides', 'free_sulfur_dioxide', 'total_sulfur_dioxide', 'density', 'pH', 'sulphates', 'alcohol', 'quality']
+2022-02-07 19:50:09,531 : INFO : utility : X: (320, 11)
+2022-02-07 19:50:09,531 : INFO : utility : y: (320,)
+2022-02-07 19:50:09,531 : INFO : utility : -------------------Predict and evaluate-------------------
+2022-02-07 19:50:09,566 : INFO : utility : Classification report: 
+               precision    recall  f1-score   support
+
+           0       0.92      0.97      0.94       273
+           1       0.73      0.51      0.60        47
+
+    accuracy                           0.90       320
+   macro avg       0.82      0.74      0.77       320
+weighted avg       0.89      0.90      0.89       320
+
+2022-02-07 19:50:09,572 : INFO : utility : Export prediction to : data/predict.csv

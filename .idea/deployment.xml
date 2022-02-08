@@ -5,7 +5,7 @@
       <paths name="wen-server">
         <serverdata>
           <mappings>
-            <mapping deploy="/media/mydrive1/pycharm/jenkins/model-productization_article" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/media/mydrive1/pycharm/jenkins/machine-learning-jenkins-pipelines" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
