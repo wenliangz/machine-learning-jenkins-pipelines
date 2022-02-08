@@ -41,7 +41,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    docker-compose -f docker-compose-fastapi.yml down --remove-orphans -v
+                    docker-compose -f docker-compose-fastapi.yml down --remove-orphans
                     docker-compose -f docker-compose-fastapi.yml up -d
                 '''
             }
