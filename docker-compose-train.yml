@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  etl:
+    image: wenliang/train-wine-prediction:22.08
+    build:
+      context: .
+      dockerfile: dockers/train/Dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./configs:/app/configs
+      - ./model:/app/model
+      - ./log:/app/log
+    command: python3 train.py
+

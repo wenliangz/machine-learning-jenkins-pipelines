@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  etl:
+    image: wenliang/etl-wine-prediction:22.08
+    build:
+      context: .
+      dockerfile: dockers/etl/Dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./configs:/app/configs
+      - ./model:/app/model
+      - ./log:/app/log
+    command: python3 etl.py
+

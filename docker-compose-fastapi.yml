@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  fastapi:
+    image: wenliang/fastapi-wine-prediction:22.08
+    build:
+      context: .
+      dockerfile: dockers/fastapi/Dockerfile
+    volumes:
+      - ./model:/app/model
+    ports:
+      - 8000:8000
+    command: uvicorn api_main:app --reload --host 0.0.0.0
+
