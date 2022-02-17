@@ -1,10 +1,14 @@
 pipeline {
     agent any
+    environment {
+        PATH="/homes/zhangwx8/anaconda3/condabin:$PATH"
+    }
     stages {
         stage('Verify') {
             steps {
+                sh 'conda --version'
                 sh '''
-                  python3 --version
+                  python --version
                 '''
                 sh 'printenv'
                 sh 'ls -l "$WORKSPACE"'
