@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PATH="/homes/zhangwx8/anaconda3/condabin:$PATH"
+        PATH="/Users/zhangwx8/miniconda3/bin/conda:$PATH"
     }
     stages {
         stage('Verify') {
