@@ -30,7 +30,7 @@ pipeline {
                 sh '''
                     source /Users/zhangwx8/miniconda3/etc/profile.d/conda.sh
                     conda activate $conda_env
-                    docker-compose -f docker-compose-etl.yml up
+                    docker-compose -f docker-compose-etl.yml up --build
                 '''
             }
         }
@@ -39,7 +39,7 @@ pipeline {
                 sh '''
                     source /Users/zhangwx8/miniconda3/etc/profile.d/conda.sh
                     conda activate $conda_env
-                    docker-compose -f docker-compose-train.yml up
+                    docker-compose -f docker-compose-train.yml up --build
                 '''
             }
         }
@@ -48,7 +48,7 @@ pipeline {
                 sh '''
                     source /Users/zhangwx8/miniconda3/etc/profile.d/conda.sh
                     conda activate $conda_env
-                    docker-compose -f docker-compose-predict.yml up
+                    docker-compose -f docker-compose-predict.yml up --build
                 '''
             }
         }
@@ -58,7 +58,7 @@ pipeline {
                     source /Users/zhangwx8/miniconda3/etc/profile.d/conda.sh
                     conda activate $conda_env
                     docker-compose -f docker-compose-fastapi.yml down --remove-orphans
-                    docker-compose -f docker-compose-fastapi.yml up -d
+                    docker-compose -f docker-compose-fastapi.yml up -d --build
                 '''
             }
         }
