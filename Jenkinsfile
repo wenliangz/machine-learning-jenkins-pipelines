@@ -19,8 +19,7 @@ pipeline {
         stage('Unit Test') {
             steps {
                 sh '''
-                    source /Users/zhangwx8/miniconda3/etc/profile.d/conda.sh
-                    conda activate $conda_env
+                    activate_conda()
                     python3 -m pytest tests/
                 '''
             }
@@ -28,6 +27,7 @@ pipeline {
         stage('ETL') {
             steps {
                 sh '''
+                    activate_conda()
                     docker-compose -f docker-compose-etl.yml up
                 '''
             }
@@ -35,6 +35,7 @@ pipeline {
         stage('Train') {
             steps {
                 sh '''
+                    activate_conda()
                     docker-compose -f docker-compose-train.yml up
                 '''
             }
@@ -42,6 +43,7 @@ pipeline {
         stage('predict') {
             steps {
                 sh '''
+                    activate_conda()
                     docker-compose -f docker-compose-predict.yml up
                 '''
             }
@@ -49,6 +51,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
+                    activate_conda()
                     docker-compose -f docker-compose-fastapi.yml down --remove-orphans
                     docker-compose -f docker-compose-fastapi.yml up -d
                 '''
@@ -56,4 +59,11 @@ pipeline {
         }
 
     }
+}
+
+void activate_conda() {
+    sh '''
+    source /Users/zhangwx8/miniconda3/etc/profile.d/conda.sh
+    conda activate $conda_env
+    '''
 }
