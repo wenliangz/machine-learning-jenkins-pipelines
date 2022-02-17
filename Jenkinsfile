@@ -19,7 +19,7 @@ pipeline {
         stage('Unit Test') {
             steps {
                 sh '''
-                    conda activate $conda_env
+                    conda init; conda activate $conda_env
                     python3 -m pytest tests/
                 '''
             }
