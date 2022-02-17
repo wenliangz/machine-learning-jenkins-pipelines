@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('Verify') {
             steps {
+                sh 'echo "$PATH"'
                 sh 'conda --version'
                 sh '''
                   python --version
