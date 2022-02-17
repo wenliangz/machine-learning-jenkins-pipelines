@@ -19,7 +19,8 @@ pipeline {
         stage('Unit Test') {
             steps {
                 sh '''
-                    conda init; conda activate $conda_env
+                    source /Users/zhangwx8/miniconda3/etc/profile.d/conda.sh
+                    conda activate $conda_env
                     python3 -m pytest tests/
                 '''
             }
