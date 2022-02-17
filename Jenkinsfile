@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         PATH="/Users/zhangwx8/miniconda3/bin:$PATH"
-        conda_env='jenkin-conda-env'
+        conda_env='jenkins-conda-env'
     }
     stages {
         stage('Verify') {
