@@ -18,40 +18,40 @@ pipeline {
         }
         stage('Unit Test') {
             steps {
+                activate_conda()
                 sh '''
-                    activate_conda()
                     python3 -m pytest tests/
                 '''
             }
         }
         stage('ETL') {
             steps {
+                activate_conda()
                 sh '''
-                    activate_conda()
                     docker-compose -f docker-compose-etl.yml up
                 '''
             }
         }
         stage('Train') {
             steps {
+                activate_conda()
                 sh '''
-                    activate_conda()
                     docker-compose -f docker-compose-train.yml up
                 '''
             }
         }
         stage('predict') {
             steps {
+                activate_conda()
                 sh '''
-                    activate_conda()
                     docker-compose -f docker-compose-predict.yml up
                 '''
             }
         }
         stage('Deploy') {
             steps {
+                activate_conda()
                 sh '''
-                    activate_conda()
                     docker-compose -f docker-compose-fastapi.yml down --remove-orphans
                     docker-compose -f docker-compose-fastapi.yml up -d
                 '''
