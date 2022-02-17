@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         PATH="/Users/zhangwx8/miniconda3/bin:$PATH"
-        conda_env='jenkin-conda-env'
+        conda_env='jenkins-conda-env'
     }
     stages {
         stage('Verify') {
@@ -21,7 +21,7 @@ pipeline {
                 sh '''
                     source /Users/zhangwx8/miniconda3/etc/profile.d/conda.sh
                     conda activate $conda_env
-                    python3 -m pytest tests/
+                    python -m pytest tests/
                 '''
             }
         }
