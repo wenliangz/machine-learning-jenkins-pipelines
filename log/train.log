@@ -1,13 +1,4 @@
-2022-02-17 19:21:08,021 : INFO : utilities.utility : Finished logger configuration!
-2022-02-17 19:21:08,021 : INFO : utilities.utility : Load config from configs/config.yml
-2022-02-17 19:21:08,025 : INFO : utilities.utility : config: {'processed_train': 'data/train.csv', 'ensemble_model': 'RandomForestClassifier', 'model_config': {'n_estimators': 100, 'random_state': 42}, 'model_path': 'model/rf_model.pkl'}
-2022-02-17 19:21:08,025 : INFO : utilities.utility : -------------------Load the processed data-------------------
-2022-02-17 19:21:08,031 : INFO : utilities.utility : cols: ['fixed_acidity', 'volatile_acidity', 'citric_acid', 'residual_sugar', 'chlorides', 'free_sulfur_dioxide', 'total_sulfur_dioxide', 'density', 'pH', 'sulphates', 'alcohol', 'quality']
-2022-02-17 19:21:08,032 : INFO : utilities.utility : X: (1279, 11)
-2022-02-17 19:21:08,032 : INFO : utilities.utility : y: (1279,)
-2022-02-17 19:21:08,033 : INFO : utilities.utility : -------------------Initiate model-------------------
-2022-02-17 19:21:08,033 : INFO : utilities.utility : Train model using RandomForestClassifier, {'n_estimators': 100, 'random_state': 42}
-2022-02-17 19:21:08,237 : INFO : utilities.utility : Train score: 1.0
-2022-02-17 19:21:09,112 : INFO : utilities.utility : CV score: 0.8991513480392157
-2022-02-17 19:21:09,113 : INFO : utilities.utility : -------------------Persist model-------------------
-2022-02-17 19:21:09,133 : INFO : utilities.utility : Persisted model to model/rf_model.pkl
+2022-03-03 10:43:05,141 : INFO : utilities.utility : Finished logger configuration!
+2022-03-03 10:43:05,141 : INFO : utilities.utility : Load config from configs/config.yml
+2022-03-03 10:43:05,148 : INFO : utilities.utility : config: {'processed_train': 'data/train.csv', 'ensemble_model': 'RandomForestClassifier', 'model_config': {'n_estimators': 100, 'random_state': 42}, 'model_path': 'model/rf_model.pkl'}
+2022-03-03 10:43:05,148 : INFO : utilities.utility : -------------------Load the processed data-------------------

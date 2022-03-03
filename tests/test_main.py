@@ -97,19 +97,3 @@ def test_update_model_wrongmethod():
 
     assert response.status_code == 405
 
-
-"""
-# root
-#     exact match
-#     output keys
-
-predict
-    # output type
-    # output keys
-
-update_model
-    multiple time
-    output type
-    output keys
-    wrong method
-"""

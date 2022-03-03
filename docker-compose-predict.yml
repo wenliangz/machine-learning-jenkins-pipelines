@@ -11,5 +11,5 @@ services:
       - ./configs:/app/configs
       - ./model:/app/model
       - ./log:/app/log
-    command: python3 predict.py
+#    command: python3 predict.py
 

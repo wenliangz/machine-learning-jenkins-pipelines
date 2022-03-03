@@ -1,11 +1,11 @@
-2022-02-17 18:57:05,017 : INFO : utilities.utility : Finished logger configuration!
-2022-02-17 18:57:05,018 : INFO : utilities.utility : Load config from configs/config.yml
-2022-02-17 18:57:05,024 : INFO : utilities.utility : config: {'raw_data_file': 'data/winequality.csv', 'processed_path': 'data', 'test_size': 0.2, 'random_state': 42}
-2022-02-17 18:57:05,024 : INFO : utilities.utility : -------------------Start data transformation-------------------
-2022-02-17 18:57:05,034 : INFO : utilities.utility : End data transformation
-2022-02-17 18:57:05,034 : INFO : utilities.utility : -------------------Train test split & Export-------------------
-2022-02-17 18:57:05,036 : INFO : utilities.utility : write data to data
-2022-02-17 18:57:05,056 : INFO : utilities.utility : train: (1279, 12)
-2022-02-17 18:57:05,056 : INFO : utilities.utility : test: (320, 12)
-2022-02-17 18:57:05,057 : INFO : utilities.utility : 
+2022-03-03 15:25:32,905 : INFO : utilities.utility : Finished logger configuration!
+2022-03-03 15:25:32,905 : INFO : utilities.utility : Load config from configs/config.yml
+2022-03-03 15:25:32,910 : INFO : utilities.utility : config: {'raw_data_file': 'data/winequality.csv', 'processed_path': 'data', 'test_size': 0.2, 'random_state': 42}
+2022-03-03 15:25:32,911 : INFO : utilities.utility : -------------------Start data transformation-------------------
+2022-03-03 15:25:32,924 : INFO : utilities.utility : End data transformation
+2022-03-03 15:25:32,925 : INFO : utilities.utility : -------------------Train test split & Export-------------------
+2022-03-03 15:25:32,926 : INFO : utilities.utility : write data to data
+2022-03-03 15:25:32,951 : INFO : utilities.utility : train: (1279, 12)
+2022-03-03 15:25:32,952 : INFO : utilities.utility : test: (320, 12)
+2022-03-03 15:25:32,952 : INFO : utilities.utility : 
 

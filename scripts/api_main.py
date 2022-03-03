@@ -60,11 +60,21 @@ def read_root():
     """
 
     return {
-        "message": "this is root, prediction endpoint should be `predict`!, update endpoint should be `update_model`"
+        "message": "welcome.this is the root!"
     }
 
 
-@app.get("/predict/")
+# @app.get("/predict/")
+# def predict_item(sample: Sample):
+#     tmp = sample.dict()
+#     print(tmp)
+#     res = predictor.model.predict(np.array(list(tmp.values())).reshape(1, -1))[0]
+#     return {
+#         "prediction": int(res),
+#         "utc_ts": int(time.time()),
+#         "model": predictor.model_class_name,
+#     }
+@app.post("/predict/")
 def predict_item(sample: Sample):
     tmp = sample.dict()
     res = predictor.model.predict(np.array(list(tmp.values())).reshape(1, -1))[0]
@@ -73,7 +83,6 @@ def predict_item(sample: Sample):
         "utc_ts": int(time.time()),
         "model": predictor.model_class_name,
     }
-
 
 @app.put("/update_model/")
 def update_model():
