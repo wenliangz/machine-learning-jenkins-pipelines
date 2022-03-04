@@ -21,7 +21,7 @@ pipeline {
                 sh '''
                     source /Users/zhangwx8/miniconda3/etc/profile.d/conda.sh
                     conda activate $conda_env
-                    python -m pytest tests/
+                    docker-compose -f docker-compose-tests.yml up
                 '''
             }
         }
