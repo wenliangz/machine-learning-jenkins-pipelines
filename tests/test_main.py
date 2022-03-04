@@ -35,7 +35,7 @@ def test_read_root():
 ### For /predict/
 #############################################
 def test_predict():
-    response = client.get("/predict/", json=data_valid_base())
+    response = client.post("/predict/", json=data_valid_base())
     response_json = response.json()
 
     assert response.status_code == 200
@@ -57,7 +57,7 @@ def test_predict():
 
 @pytest.mark.parametrize("test_object", TO_TEST_INVALID)
 def test_predict_invalid(test_object):
-    response = client.get("/predict/", json=test_object())
+    response = client.post("/predict/", json=test_object())
     response_json = response.json()
 
     assert response.status_code == 422

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  etl:
+    image: wenliang/tests-wine-prediction:22.03
+    build:
+      context: .
+      dockerfile: dockers/unittests/Dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./configs:/app/configs
+      - ./model:/app/model
+      - ./utilities:/app/utilities
+      - ./tests:/app/tests
+
