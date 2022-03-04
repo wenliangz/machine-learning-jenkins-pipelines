@@ -4,7 +4,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from api_main import app
-from mock_data import *
+from tests.mock_data import *
 
 #############################################
 ### Group mock data for parametrized unit test
